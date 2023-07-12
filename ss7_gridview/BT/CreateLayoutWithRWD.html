@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header, footer {
+            padding: 0px;
+            color: white;
+            background: cadetblue;
+        }
+        nav ul{
+            padding: 0px;
+        }
+        header nav ul li {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        #left {
+            grid-column-start:  1;
+            grid-column-end: 3;
+            background: #CDCDCD;
+        }
+
+        #content {
+            grid-column-start: 3;
+            grid-column-end: 11;
+            background: white;
+            padding-left: 10px;
+        }
+
+        #right {
+            grid-column-start: 11;
+            grid-column-end: 13;
+            background: #CDCDCD;
+            padding: 20px;
+        }
+        #footer{
+            padding: 20px;
+            text-align: center;
+
+        }
+        #home{
+            background: cadetblue;
+            font-weight: bold;
+        }
+        #left1{
+            color: cornflowerblue;
+            text-align: center;
+            list-style: none;
+            padding: 0px;
+
+        }
+        #login{
+            float: right;
+        }
+        .right1{
+            overflow: hidden;
+            border: 1px white;
+            background: white;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>Logo</li>
+            <li id="home">Home</li>
+            <li>About</li>
+            <li>Project</li>
+            <li>Contact</li>
+            <li id="login"><i class="fa fa-sign-out" aria-hidden="true"></i>Login</li>
+        </ul>
+    </nav>
+</header>
+<div id="main">
+    <div id="left">
+        <ul id="left1">
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Welcome</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</h3>
+        <hr>
+        <h2>Test</h2>
+        <h3>Lorem ipsum...</h3>
+    </div>
+    <div id="right">
+        <div >
+            <p class="right1">ADS</p>
+            <p class="right1">ADS</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <p id="footer">Footer text</p>
+</footer>
+</body>
+</html>
