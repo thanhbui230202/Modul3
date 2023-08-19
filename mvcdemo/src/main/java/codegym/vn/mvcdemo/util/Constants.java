@@ -9,5 +9,5 @@ public class Constants {
     public static final String CREATE_PRODUCT = "insert into product values(?,?,?,?,?,?)";
     public static final String UPDATE_PRODUCT = "update product set name = ?, quantity = ?," +
             "price = ?, date_release = ?, category_id = ? where id = ?";
-    public static final String DELETE_PRODUCT_BY_ID = "delete product where id = ?";
+    public static final String DELETE_PRODUCT_BY_ID = "delete employee where id = ?";
 }

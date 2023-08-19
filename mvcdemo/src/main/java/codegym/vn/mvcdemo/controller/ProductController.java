@@ -28,7 +28,6 @@ public class ProductController extends HttpServlet {
         if (action == null) {
             action = "list";
         }
-
         switch (action) {
             case "list":
                 viewList(req, resp);
@@ -96,6 +95,7 @@ public class ProductController extends HttpServlet {
         }
         int categoryId = Integer.parseInt(req.getParameter("categoryId"));
         Category category = categoryService.findById(categoryId);
+
         Product product = new Product(id, name, quantity, price, dateRelease, category);
         productService.add(product);
         resp.sendRedirect("/product?action=list");

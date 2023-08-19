@@ -25,9 +25,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
                 String name = resultSet.getString("name");
                 category = new Category(id, name);
             }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
         return category;
@@ -46,9 +44,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
                 category = new Category(id, name);
                 categories.add(category);
             }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
         return categories;

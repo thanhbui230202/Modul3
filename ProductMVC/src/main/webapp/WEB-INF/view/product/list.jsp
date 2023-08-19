@@ -46,6 +46,10 @@
 <body>
     <h1>List product</h1>
     <a href="/product?action=create">Add new product</a>
+    <br>
+    <input type="text" name="action" value="search">
+    <br>
+    <input type="submit" value="Search">
     <table class="styled-table">
     <thead>
     <tr>

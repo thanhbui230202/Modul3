@@ -24,9 +24,7 @@ public class ProductRepositoryImpl implements ProductRepository {
             statement.setDate(5, new Date(product.getDateRelease().getTime()));
             statement.setInt(6, product.getCategory().getId());
             statement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
     }
@@ -85,9 +83,7 @@ public class ProductRepositoryImpl implements ProductRepository {
             statement.setDate(4, new Date(product.getDateRelease().getTime()));
             statement.setInt(5, product.getCategory().getId());
             statement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
     }
@@ -112,9 +108,7 @@ public class ProductRepositoryImpl implements ProductRepository {
                 product = new Product(id, name, quantity, price, dateRelease, category);
                 products.add(product);
             }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
         return products;

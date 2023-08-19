@@ -38,9 +38,7 @@ public class ProductRepoImpl implements ProductRepo {
             preparedStatement.setString(6,product.getDescription());
             preparedStatement.setString(7,product.getCategory());
             preparedStatement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
 //        productList.add(product);
@@ -54,9 +52,7 @@ public class ProductRepoImpl implements ProductRepo {
         ){
             statement.setInt(1, product.getId());
             statement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
 //        productList.remove(product);
@@ -92,9 +88,7 @@ public class ProductRepoImpl implements ProductRepo {
             }
 
 
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
 //        return productList;
@@ -115,9 +109,7 @@ public class ProductRepoImpl implements ProductRepo {
             preparedStatement.setString(5,product.getDescription());
             preparedStatement.setString(6,product.getCategory());
             preparedStatement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
 
@@ -156,9 +148,7 @@ public class ProductRepoImpl implements ProductRepo {
             }
 
 
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
 //        return productList;
